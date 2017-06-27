@@ -1,0 +1,34 @@
+author: Steve Kasuya <steve.kasuya@gmail.com>
+description: A default Mongoose OS firmware with the modified init.js
+# arch: PLATFORM
+version: 1.0
+skeleton_version: 2017-05-18
+
+tags:
+  - js
+  - c
+  - hw
+
+sources:
+  - src
+
+filesystem:
+  - fs
+
+config_schema:
+  - ["mqtt.server", "iot.eclipse.org:1883"]
+  - ["mqtt.enable", true]
+  - ["rpc.mqtt.enable", false]  # Disable remote control over MQTT
+
+libs:
+    # common mgos libs
+  - origin: https://github.com/mongoose-os-libs/http-server
+  - origin: https://github.com/mongoose-os-libs/rpc-loopback
+  - origin: https://github.com/mongoose-os-libs/rpc-mqtt
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
+
+    # libs necessary for the current app
+  - origin: https://github.com/mongoose-os-libs/aws
+  - origin: https://github.com/mongoose-os-libs/mjs
