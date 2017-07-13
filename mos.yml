@@ -1,5 +1,5 @@
 author: Steve Kasuya <steve.kasuya@gmail.com>
-description: A default Mongoose OS firmware with the modified init.js
+description: IoT doorbell that works via MQTT: generic MQTT server, AWS IoT, Google IoT, etc
 # arch: PLATFORM
 version: 1.0
 skeleton_version: 2017-05-18
